@@ -1,0 +1,62 @@
+#IDEA 4
+# This game uses a home made function, adds in a counter and has a choice of levels.
+
+import random
+
+# create variables:
+counter = 1  ------------------------------------------NEW ADDITION
+
+# Create the function is_same()
+def is_same(target, number):
+    if target == number:
+        result="Win"
+    elif target > number:
+        result="Low"
+    else:
+        result="High"
+
+    return result
+
+# Ask for users level choice:  -----------------------------------------------------------------------NEW ADDITION
+level = input("Hello.\nPlease choose which game to play: Easy, Medium or Hard?\ne/m/h:")
+
+while level != "e" and level != "m" and level != "h":
+    level = input("Sorry. You must type in one of the letters 'e', 'm' or 'h'\ne/m/h:")
+
+# select level    -----------------------------------------------------------------------------NEW ADDITON
+if level == "e":
+    upper_limit = 10
+elif level == "m":
+    upper_limit = 20
+else:
+    upper_limit = 100
+    
+# Think of a number
+computer_number = random.randint(1, upper_limit)      ---------------------------------NEW ADDITION
+
+# Start the game
+print("\nI have thought of a number between 1 and ", upper_limit)   ---------------------NEW ADDTION
+
+
+
+
+
+
+now the idea to this level is to make the game more interesting by giving the players levels to choose from EASY, MEDIUM AND HARD. 
+
+firstly,Starting with the create variable:we must add a counter variable from the start this tells the game where to start from
+
+secondly, we introduced the #ask for users level choice: this willl ask the player to pick a level from the options 
+
+thirdly,#select level : this we create the code for the level with limits. 10, 20, and 100
+
+forthly, we create the number limit. #think of a number: unlike the previous code were we used random.randint(1,100) or (1,10) where we made the game easy
+this time since we have options and hvae created a level we use : computer_number = random.randint(1, upper_limit)this code will pick according to the level the 
+player picks.
+
+finally, # start the game : instead of print("\nI have thought of a number between 1 and 100 or 1 and 10.... used in the previous code we change it to 
+print("\nI have thought of a number between 1 and ", upper_limit)   ---------------------NEW ADDTION
+
+
+ 
+
